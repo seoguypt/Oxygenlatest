@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "HBOT Insights: Oxyzen London Blog";
+const description = "Stay informed about the latest developments in Hyperbaric Oxygen Therapy. Explore expert articles, case studies, and health tips from Oxyzen London.";
+
+const blogPosts = [
+  {
+    title: "The Science Behind HBOT: How Oxygen Therapy Works",
+    slug: "science-behind-hbot",
+    excerpt: "Dive deep into the physiological mechanisms that make Hyperbaric Oxygen Therapy an effective treatment for various conditions.",
+    date: "2023-06-15",
+  },
+  {
+    title: "HBOT for Athletes: Boosting Performance and Recovery",
+    slug: "hbot-for-athletes",
+    excerpt: "Discover how professional athletes are using Hyperbaric Oxygen Therapy to enhance their performance and speed up recovery times.",
+    date: "2023-06-10",
+  },
+  {
+    title: "Combating Long COVID with Hyperbaric Oxygen Therapy",
+    slug: "hbot-for-long-covid",
+    excerpt: "Learn about the promising results of using HBOT to address persistent symptoms in Long COVID patients.",
+    date: "2023-06-05",
+  },
+  {
+    title: "HBOT and Brain Health: New Frontiers in Neurology",
+    slug: "hbot-and-brain-health",
+    excerpt: "Explore the latest research on how Hyperbaric Oxygen Therapy is being used to support brain health and treat neurological conditions.",
+    date: "2023-05-30",
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">HBOT Insights: Oxyzen London Blog</h1>
+    
+    <section class="mb-12">
+      <p class="mb-4">Welcome to the Oxyzen London blog, your source for the latest insights, research, and expert opinions on Hyperbaric Oxygen Therapy (HBOT). Here, we explore the wide-ranging applications of HBOT, share success stories, and keep you informed about the latest developments in the field of oxygen therapy.</p>
+      <p class="mb-4">Whether you're a patient, healthcare professional, or simply curious about HBOT, our blog offers valuable information to help you understand the potential of this innovative treatment.</p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-8">
+      {blogPosts.map((post) => (
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-2xl font-semibold mb-2">
+            <a href={`/blog/${post.slug}`} class="text-primary hover:underline">{post.title}</a>
+          </h2>
+          <p class="text-gray-600 mb-2">{new Date(post.date).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'})}</p>
+          <p class="mb-4">{post.excerpt}</p>
+          <a href={`/blog/${post.slug}`} class="text-primary hover:underline">Read more</a>
+        </div>
+      ))}
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-3xl font-semibold mb-4">Stay Informed with Oxyzen London</h2>
+      <p class="mb-4">Our blog is regularly updated with new articles, case studies, and expert insights. Subscribe to our newsletter to stay up-to-date with the latest in HBOT research and applications.</p>
+      <a href="#" class="bg-primary text-white py-2 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Subscribe to Our Newsletter</a>
+    </section>
+  </div>
+</Layout>

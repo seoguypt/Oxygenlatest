@@ -1,0 +1,129 @@
+---
+const navItems = [
+  { name: 'Home', href: '/' },
+  {
+    name: 'Services',
+    href: '/services',
+    submenu: [
+      { name: 'Standard Sessions', href: '/services/standard-sessions' },
+      { name: 'Premium Sessions', href: '/services/premium-sessions' },
+      { name: 'Athletic Recovery', href: '/services/athletic-recovery' },
+      { name: 'Beauty & Anti-Aging', href: '/services/beauty-anti-aging' },
+    ],
+  },
+  {
+    name: 'Benefits',
+    href: '/oxygen-therapy-benefits',
+    submenu: [
+      { name: 'Wound Healing', href: '/benefits/accelerated-wound-healing' },
+      { name: 'Circulation', href: '/benefits/enhanced-circulation' },
+      { name: 'Anti-Aging', href: '/benefits/anti-aging' },
+      { name: 'Immune System', href: '/benefits/immune-system' },
+      { name: 'Brain Health', href: '/benefits/brain-health' },
+      { name: 'Athletic Performance', href: '/benefits/athletic-performance' },
+      { name: 'Skin Health', href: '/benefits/skin-health' },
+    ],
+  },
+  {
+    name: 'Conditions',
+    href: '/conditions',
+    submenu: [
+      { name: 'Sports Injuries', href: '/conditions/sports-injuries' },
+      { name: 'Burn Recovery', href: '/conditions/burn-recovery' },
+      { name: 'Post-Surgical Recovery', href: '/conditions/post-surgical-recovery' },
+      { name: 'Necrotizing Infections', href: '/conditions/necrotizing-infections' },
+      { name: 'Chronic Bone Infections', href: '/conditions/chronic-bone-infections' },
+      { name: 'Traumatic Brain Injury', href: '/conditions/traumatic-brain-injury' },
+      { name: 'Post-Stroke Recovery', href: '/conditions/post-stroke-recovery' },
+      { name: 'Long COVID Recovery', href: '/conditions/long-covid-recovery' },
+      { name: 'Fibromyalgia', href: '/conditions/fibromyalgia' },
+      { name: 'Chronic Fatigue Syndrome', href: '/conditions/chronic-fatigue-syndrome' },
+      { name: 'Anti-Aging', href: '/conditions/anti-aging' },
+      { name: 'Athletic Performance', href: '/conditions/athletic-performance' },
+      { name: 'Mental Clarity', href: '/conditions/mental-clarity' },
+      { name: 'Sleep Disorders', href: '/conditions/sleep-disorders' },
+      { name: 'Immune System Support', href: '/conditions/immune-system-support' },
+      { name: 'Respiratory Conditions', href: '/conditions/respiratory-conditions' },
+      { name: 'Chronic Pain', href: '/conditions/chronic-pain' },
+      { name: 'Neurological Conditions', href: '/conditions/neurological' },
+    ],
+  },
+  { name: 'About', href: '/about' },
+  { name: 'Locations', href: '/locations' },
+  { name: 'Pricing', href: '/pricing' },
+  {
+    name: 'Resources',
+    href: '/resources',
+    submenu: [
+      { name: 'What is HBOT?', href: '/what-is-hyperbaric-oxygen-therapy' },
+      { name: 'FAQs', href: '/faq' },
+      { name: 'Blog', href: '/blog' },
+    ],
+  },
+  { name: 'Booking', href: '/booking' },
+];
+---
+
+<nav class="container mx-auto relative">
+  <ul class="flex justify-center space-x-6">
+    {navItems.map((item) => (
+      <li class="relative group">
+        <a href={item.href} class="hover:text-primary py-2 px-3 inline-block">{item.name}</a>
+        {item.submenu && (
+          <ul class="submenu absolute left-0 hidden bg-white shadow-lg rounded-lg z-10">
+            {item.submenu.map((subitem) => (
+              <li>
+                <a href={subitem.href} class="block px-4 py-2 text-sm hover:bg-secondary hover:text-primary whitespace-nowrap">
+                  {subitem.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  function handleSubmenu() {
+    const menuItems = document.querySelectorAll('nav > ul > li');
+    
+    menuItems.forEach(item => {
+      const link = item.querySelector('a');
+      const submenu = item.querySelector('.submenu');
+      
+      if (submenu) {
+        // For desktop: show submenu on hover
+        item.addEventListener('mouseenter', () => {
+          submenu.classList.remove('hidden');
+        });
+        
+        item.addEventListener('mouseleave', () => {
+          submenu.classList.add('hidden');
+        });
+        
+        // For mobile: toggle submenu on click
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            submenu.classList.toggle('hidden');
+          }
+        });
+      }
+    });
+  }
+
+  // Run the function when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', handleSubmenu);
+
+  // Run the function again if the page is dynamically updated (for Astro)
+  document.addEventListener('astro:page-load', handleSubmenu);
+</script>
+
+<style>
+  /* Add any additional styles here if needed */
+  .submenu {
+    min-width: 200px;
+  }
+</style>

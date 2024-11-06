@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Our Locations - Oxyzen London";
+const description = "Find Oxyzen London's hyperbaric oxygen therapy clinics across London. Convenient locations in Central, East, and West London for your oxygen therapy needs.";
+---
+
+<Layout title={title} description={description}>
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">Our Locations</h1>
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Oxyzen London Clinics</h2>
+      <p class="mb-4">At Oxyzen London, we strive to make our cutting-edge hyperbaric oxygen therapy accessible to all Londoners. We have strategically placed our clinics across the city to ensure that you can easily find a location near you. Each of our clinics is equipped with state-of-the-art hyperbaric chambers and staffed by our team of expert professionals.</p>
+    </section>
+
+    <section id="central-london" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Central London</h2>
+      <p class="mb-4">Our flagship clinic is located in the heart of London, offering easy access to our services for those living or working in the city centre.</p>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Oxyzen London - Central</h3>
+        <p>123 Oxford Street, London, W1D 2LG</p>
+        <p>Phone: +44-20-1234-5678</p>
+        <p>Email: central@oxyzenlondon.co.uk</p>
+        <p>Hours: Monday-Saturday, 9:00 AM - 6:00 PM</p>
+      </div>
+    </section>
+
+    <section id="east-london" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">East London</h2>
+      <p class="mb-4">Our East London clinic serves the vibrant communities of the East End, providing convenient access to our oxygen therapy services.</p>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Oxyzen London - East</h3>
+        <p>45 Brick Lane, London, E1 6PU</p>
+        <p>Phone: +44-20-2345-6789</p>
+        <p>Email: east@oxyzenlondon.co.uk</p>
+        <p>Hours: Monday-Saturday, 9:00 AM - 6:00 PM</p>
+      </div>
+    </section>
+
+    <section id="west-london" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">West London</h2>
+      <p class="mb-4">Our West London location caters to the residents of West London, offering our premium oxygen therapy services in a convenient setting.</p>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Oxyzen London - West</h3>
+        <p>78 Notting Hill Gate, London, W11 3HT</p>
+        <p>Phone: +44-20-3456-7890</p>
+        <p>Email: west@oxyzenlondon.co.uk</p>
+        <p>Hours: Monday-Saturday, 9:00 AM - 6:00 PM</p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Book Your Session</h2>
+      <p class="mb-4">Ready to experience the benefits of hyperbaric oxygen therapy? Book your session at the Oxyzen London location most convenient for you. Our team is ready to welcome you and guide you through your oxygen therapy journey.</p>
+      <a href="/booking" class="bg-primary text-white py-2 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Book Now</a>
+    </section>
+  </div>
+</Layout>

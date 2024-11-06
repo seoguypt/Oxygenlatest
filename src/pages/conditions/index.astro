@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Conditions Treated with HBOT | Oxyzen London";
+const description = "Explore the wide range of conditions that can be treated or managed with Hyperbaric Oxygen Therapy (HBOT) at Oxyzen London. From sports injuries to chronic diseases, discover how HBOT can help.";
+
+const conditions = [
+  { name: "Sports Injuries", href: "/conditions/sports-injuries", description: "Accelerate recovery from sports-related injuries and enhance performance." },
+  { name: "Burn Recovery", href: "/conditions/burn-recovery", description: "Promote healing of severe burns and reduce complications." },
+  { name: "Post-Surgical Recovery", href: "/conditions/post-surgical-recovery", description: "Enhance healing after major surgery and reduce risk of infection." },
+  { name: "Necrotizing Infections", href: "/conditions/necrotizing-infections", description: "Support treatment of flesh-eating bacteria and preserve healthy tissue." },
+  { name: "Chronic Bone Infections", href: "/conditions/chronic-bone-infections", description: "Treat osteomyelitis and enhance antibiotic effectiveness." },
+  { name: "Traumatic Brain Injury", href: "/conditions/traumatic-brain-injury", description: "Support neurological recovery and reduce brain swelling." },
+  { name: "Post-Stroke Recovery", href: "/conditions/post-stroke-recovery", description: "Aid recovery of oxygen-starved brain tissue and support neuroplasticity." },
+  { name: "Long COVID Recovery", href: "/conditions/long-covid-recovery", description: "Address persistent symptoms and support tissue repair." },
+  { name: "Fibromyalgia", href: "/conditions/fibromyalgia", description: "Reduce chronic pain and improve energy levels." },
+  { name: "Chronic Fatigue Syndrome", href: "/conditions/chronic-fatigue-syndrome", description: "Increase energy production and improve cognitive function." },
+  { name: "Anti-Aging", href: "/conditions/anti-aging", description: "Promote collagen production and support cellular regeneration." },
+  { name: "Athletic Performance", href: "/conditions/athletic-performance", description: "Accelerate recovery time and improve endurance." },
+  { name: "Mental Clarity", href: "/conditions/mental-clarity", description: "Enhance cognitive function and improve focus." },
+  { name: "Sleep Disorders", href: "/conditions/sleep-disorders", description: "Help regulate sleep patterns and improve sleep quality." },
+  { name: "Immune System Support", href: "/conditions/immune-system-support", description: "Boost immune function and enhance natural healing processes." },
+  { name: "Respiratory Conditions", href: "/conditions/respiratory-conditions", description: "Improve lung function and enhance oxygen delivery to tissues." },
+  { name: "Chronic Pain", href: "/conditions/chronic-pain", description: "Manage various types of chronic pain and reduce inflammation." },
+  { name: "Neurological Conditions", href: "/conditions/neurological", description: "Support brain health and manage various neurological disorders." },
+];
+---
+
+<Layout title={title} description={description}>
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">Conditions Treated with Hyperbaric Oxygen Therapy</h1>
+    
+    <section class="mb-12">
+      <p class="mb-4">At Oxyzen London, we utilize the power of Hyperbaric Oxygen Therapy (HBOT) to treat and manage a wide range of conditions. HBOT has shown promising results in various medical fields, from sports medicine to neurology. Below, you'll find an overview of the conditions we treat, along with links to more detailed information about each.</p>
+      <p class="mb-4">Please note that while HBOT has shown benefits for these conditions, individual results may vary. We recommend consulting with our specialists to determine if HBOT is right for your specific situation.</p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-8">
+      {conditions.map((condition) => (
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-2xl font-semibold mb-2">
+            <a href={condition.href} class="text-primary hover:underline">{condition.name}</a>
+          </h2>
+          <p>{condition.description}</p>
+          <a href={condition.href} class="mt-4 inline-block text-primary hover:underline">Learn more</a>
+        </div>
+      ))}
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-3xl font-semibold mb-4">Explore HBOT Treatment at Oxyzen London</h2>
+      <p class="mb-4">Whether you're dealing with a sports injury, recovering from surgery, or managing a chronic condition, Hyperbaric Oxygen Therapy at Oxyzen London could be an important part of your treatment plan. Our state-of-the-art facilities and expert team are ready to support you on your journey to better health.</p>
+      <p class="mb-4">If you don't see your specific condition listed here, or if you have any questions about how HBOT might benefit you, please don't hesitate to reach out. We're here to help you explore the potential of oxygen therapy for your unique health needs.</p>
+      <a href="/booking" class="bg-primary text-white py-2 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Book a Consultation</a>
+    </section>
+  </div>
+</Layout>

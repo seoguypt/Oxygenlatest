@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Book Your Session - Oxyzen London";
+const description = "Schedule your hyperbaric oxygen therapy session at Oxyzen London. Easy online booking for all our services and locations.";
+---
+
+<Layout title={title} description={description}>
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">Book Your Session</h1>
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Start Your Oxygen Therapy Journey</h2>
+      <p class="mb-4">We're excited to welcome you to Oxyzen London and guide you through your hyperbaric oxygen therapy experience. Booking your session is quick and easy with our online system.</p>
+    </section>
+
+    <section id="booking-form" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Online Booking</h2>
+      <p class="mb-4">Please fill out the form below to book your session. If you have any questions or special requirements, don't hesitate to contact us directly.</p>
+      
+      <form class="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+          <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+          <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label for="service" class="block text-gray-700 text-sm font-bold mb-2">Service</label>
+          <select id="service" name="service" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="">Select a Service</option>
+            <option value="standard">Standard Session</option>
+            <option value="premium">Premium Session</option>
+            <option value="athletic">Athletic Recovery</option>
+            <option value="beauty">Beauty & Anti-Aging</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label for="location" class="block text-gray-700 text-sm font-bold mb-2">Location</label>
+          <select id="location" name="location" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option value="">Select a Location</option>
+            <option value="central">Central London</option>
+            <option value="east">East London</option>
+            <option value="west">West London</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Preferred Date</label>
+          <input type="date" id="date" name="date" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label for="time" class="block text-gray-700 text-sm font-bold mb-2">Preferred Time</label>
+          <input type="time" id="time" name="time" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        
+        <div class="mb-4">
+          <label for="notes" class="block text-gray-700 text-sm font-bold mb-2">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+        </div>
+        
+        <div class="flex items-center justify-between">
+          <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Book Session
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="booking-info" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Booking Information</h2>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Sessions typically last 60-90 minutes, including preparation time.</li>
+        <li>Please arrive 15 minutes before your scheduled appointment time.</li>
+        <li>Wear comfortable, loose-fitting clothing.</li>
+        <li>Avoid wearing perfumes, colognes, or strong scents.</li>
+        <li>If you're feeling unwell or have any concerns, please contact us before your appointment.</li>
+      </ul>
+    </section>
+
+    <section id="cancellation-policy" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Cancellation Policy</h2>
+      <p class="mb-4">We understand that plans can change. If you need to reschedule or cancel your appointment, please do so at least 24 hours in advance to avoid any cancellation fees. You can manage your bookings by logging into your account or contacting our customer service team.</p>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-4">Need Assistance?</h2>
+      <p class="mb-4">If you have any questions about booking or need help selecting the right service for you, our team is here to help. Don't hesitate to reach out.</p>
+      <a href="/contact" class="text-primary hover:underline">Contact Us</a>
+    </section>
+  </div>
+</Layout>

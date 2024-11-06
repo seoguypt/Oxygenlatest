@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Pricing - Oxyzen London";
+const description = "Explore our competitive pricing options for hyperbaric oxygen therapy sessions at Oxyzen London. Find the perfect package for your wellness journey.";
+---
+
+<Layout title={title} description={description}>
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">Pricing</h1>
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Invest in Your Health with Oxyzen London</h2>
+      <p class="mb-4">At Oxyzen London, we believe that everyone should have access to the transformative benefits of hyperbaric oxygen therapy. We offer a range of pricing options to suit different needs and budgets, ensuring that you can find a package that works for you.</p>
+      <p class="mb-4">All our sessions are conducted in state-of-the-art hyperbaric chambers under the supervision of our expert staff, ensuring you receive the highest quality care and most effective treatment possible.</p>
+    </section>
+
+    <section id="single-sessions" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Single Sessions</h2>
+      <p class="mb-4">Perfect for those who want to try out our services or need occasional treatments:</p>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Standard Session (60 minutes)</h3>
+        <p class="text-2xl font-bold text-primary">£150</p>
+        <ul class="list-disc pl-6 mt-4">
+          <li>60-minute session in our hyperbaric chamber</li>
+          <li>Pre-session consultation</li>
+          <li>Post-session refreshments</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="multi-session-packages" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Multi-Session Packages</h2>
+      <p class="mb-4">Save money and commit to your health with our multi-session packages:</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">5-Session Package</h3>
+          <p class="text-2xl font-bold text-primary">£675 (Save £75)</p>
+          <ul class="list-disc pl-6 mt-4">
+            <li>5 x 60-minute sessions</li>
+            <li>Valid for 3 months</li>
+            <li>Personalized treatment plan</li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">10-Session Package</h3>
+          <p class="text-2xl font-bold text-primary">£1,300 (Save £200)</p>
+          <ul class="list-disc pl-6 mt-4">
+            <li>10 x 60-minute sessions</li>
+            <li>Valid for 6 months</li>
+            <li>Comprehensive health assessment</li>
+            <li>Priority booking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="memberships" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Monthly Memberships</h2>
+      <p class="mb-4">For those committed to making hyperbaric oxygen therapy a regular part of their wellness routine:</p>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Unlimited Monthly Membership</h3>
+        <p class="text-2xl font-bold text-primary">£999/month</p>
+        <ul class="list-disc pl-6 mt-4">
+          <li>Unlimited 60-minute sessions</li>
+          <li>Priority booking</li>
+          <li>Monthly health check-up</li>
+          <li>10% discount on additional services</li>
+          <li>Minimum 3-month commitment</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="corporate-packages" class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Corporate Packages</h2>
+      <p class="mb-4">Invest in your team's health and productivity with our corporate packages. We offer tailored solutions for businesses of all sizes. Contact us for a custom quote and to discuss how we can support your company's wellness initiatives.</p>
+      <a href="/contact" class="text-primary hover:underline">Get in touch for corporate pricing</a>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Book Your Session</h2>
+      <p class="mb-4">Ready to experience the benefits of hyperbaric oxygen therapy? Choose the package that's right for you and start your journey to improved health and wellbeing today.</p>
+      <a href="/booking" class="bg-primary text-white py-2 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Book Now</a>
+    </section>
+  </div>
+</Layout>
